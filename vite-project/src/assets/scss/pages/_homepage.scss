@@ -1,7 +1,6 @@
 .hero__wrapper{
     display:flex;
     flex-direction:column-reverse;
-    background-color:$yellow;
 
     h1{
         font-size:calc($largest * 0.65);
@@ -18,6 +17,11 @@
         text-transform:uppercase;
         margin:0 calc($padding*2);
     }
+}
+
+.hero__wrapper--upper{
+        background-color:$yellow;
+        padding-bottom:calc($padding * 2);
 }
 
 .hero__wrapper--lower{

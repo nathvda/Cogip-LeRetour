@@ -11,43 +11,43 @@ const LoginAndSignUp = () => {
 
     return (
         <div className="homepage__login">
-            <button id="signup" class="button button--primary" onClick={() => open("signupModal")}>Sign up</button>
-            <div id="signupModal" class="modal">
-                <div class="modal-content"> 
-                    <button class="close-modal" onClick={() => close("signupModal")}>X</button>
+            <button id="signup" className="button button--primary" onClick={() => open("signupModal")}>Sign up</button>
+            <div id="signupModal" className="modal">
+                <div className="modal-content"> 
+                    <button className="close-modal" onClick={() => close("signupModal")}>X</button>
                     <form method="post" action="">
                         <h3>Sign up</h3>
-                    <div class="form__field">
-                        <label for="email">email address</label>
+                    <div className="form__field">
+                        <label htmlFor="email">email address</label>
                         <input type="text" id="email" name="email"/>  
                     </div>
-                    <div class="form__field">
-                        <label for="password">password</label>
+                    <div className="form__field">
+                        <label htmlFor="password">password</label>
                         <input type="password" id="password" name="password"/>  
                     </div>
-                    <div class="form__field">
-                        <label for="password-confirm">password</label>
+                    <div className="form__field">
+                        <label htmlFor="password-confirm">password</label>
                         <input type="password" id="password-confirm" name="password-confirm"/>  
                     </div>
-                    <button class="button button--submit" type="submit">Sign up</button>
+                    <button className="button button--submit" type="submit">Sign up</button>
                     </form>
                 </div>
             </div>
-            <button id="login" class="button" onClick={() => open("loginModal")}>Login</button>
-            <div id="loginModal" class="modal">
-                <div class="modal-content"> 
-                    <button class="close-modal" onClick={() => close("loginModal")}>X</button>
+            <button id="login" className="button" onClick={() => open("loginModal")}>Login</button>
+            <div id="loginModal" className="modal">
+                <div className="modal-content"> 
+                    <button className="close-modal" onClick={() => close("loginModal")}>X</button>
                     <form method="post" action="">
                         <h3>Log in</h3>
-                    <div class="form__field">
-                        <label for="email">email address</label>
+                    <div className="form__field">
+                        <label htmlFor="email">email address</label>
                         <input type="text" id="email" name="email"/>  
                     </div>
-                    <div class="form__field">
-                        <label for="password">password</label>
+                    <div className="form__field">
+                        <label htmlFor="password">password</label>
                         <input type="password" id="password" name="password"/>  
                     </div>
-                    <button class="button button--submit" type="submit">Log in</button>
+                    <button className="button button--submit" type="submit">Log in</button>
                     </form>
                 </div>
             </div>

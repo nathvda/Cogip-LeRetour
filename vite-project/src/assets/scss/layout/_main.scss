@@ -1,0 +1,17 @@
+main{
+    position:relative;
+}
+
+main::before{
+content:" ";
+width:100%;
+height:$padding;
+top:-$padding;
+display:block;
+position:absolute;
+background-image:url('/images/background__shape.png');
+background-size:80%;
+background-repeat:no-repeat;
+background-position:bottom center;
+
+}

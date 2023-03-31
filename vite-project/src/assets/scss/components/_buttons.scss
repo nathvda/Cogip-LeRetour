@@ -14,12 +14,11 @@
 
 .button--submit{
     background:$yellow;
-    color:white;
+    color:rgb(13, 13, 13);
 }
 
 .button--submit:focus{
     background:$yellow;
-    color:white;
     outline-offset:0.2rem;
     outline:0.2rem solid $yellow;
 }

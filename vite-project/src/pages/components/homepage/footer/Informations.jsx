@@ -8,7 +8,7 @@ const Informations = () => {
                 <div><img src="/images/icons/Tel.svg"/>(123) 456-7890</div>
                 <div><img src="/images/icons/Fax.svg"/>(123) 456-7890</div>
             </div>
-            <div class="informations__social">
+            <div className="informations__social">
                 <span>Social Media</span>
                 <span><img src="/images/icons/Facebook.svg"/>
                 <img src="/images/icons/Twitter.svg"/>

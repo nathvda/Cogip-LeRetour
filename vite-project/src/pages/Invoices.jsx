@@ -4,11 +4,13 @@ import Footer from './components/homepage/footer/Footer';
 
 const Invoices = () => {
     return (
-        <main>
+        <>
             <Header/>
+        <main>
         Invoices table
-        <Footer/>
         </main>
+        <Footer/>
+        </>
     );
 };
 

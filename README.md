@@ -7,6 +7,9 @@ It is a duplicate in some way of the other CogipProject you can find on my repos
 
 ## Technologies used
 
+- React (React-router-dom)
+- SCSS
+
 ## Versions
 
 ## Known problems

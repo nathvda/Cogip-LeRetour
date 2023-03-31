@@ -4,11 +4,13 @@ import Footer from './components/homepage/footer/Footer';
 
 const Contacts = () => {
     return (
-        <main>
+        <>
         <Header/>
+        <main>
         Contacts table
-        <Footer/>
         </main>
+        <Footer/>
+        </>
     );
 };
 
