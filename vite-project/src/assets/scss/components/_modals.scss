@@ -8,6 +8,7 @@
     backdrop-filter:blur($padding);
     font-family:$mainfont;
     display:none;
+    z-index:9999;
 
     .modal-content{
         background-color:white;

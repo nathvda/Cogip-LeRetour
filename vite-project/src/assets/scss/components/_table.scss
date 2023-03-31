@@ -1,0 +1,26 @@
+.homepage__table-container {
+	width: 100vw;
+	overflow-x: auto;
+
+
+.homepage__table {
+	max-width: 80%;
+	margin: auto;
+    overflow:hidden;
+    overflow-x:scroll;
+
+    th{
+        background-color:$yellow;
+        padding:$padding;
+        font-weight:bolder;
+    }
+
+    td{
+        padding:$padding;
+        min-width:max-content;
+    }
+    tr:nth-child(even){
+        background-color:#F5F5F5;
+    }
+}
+}

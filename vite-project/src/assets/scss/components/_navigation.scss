@@ -19,3 +19,10 @@
         }
     }
 }
+
+@media screen and (min-width:820px){
+    .homepage__navigation{
+        flex-direction:row;
+    }
+
+}

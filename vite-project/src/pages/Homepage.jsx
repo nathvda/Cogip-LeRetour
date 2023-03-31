@@ -6,19 +6,19 @@ import Footer from './components/homepage/footer/Footer';
 
 const Homepage = () => {
 
-    const [contacts, setContacts] = useState([])
-    const [invoices, setInvoices] = useState([])
-    const [companies, setCompanies] = useState([])
+    const [allcontacts, setAllContacts] = useState([])
+    const [allinvoices, setAllInvoices] = useState([])
+    const [allcompanies, setAllCompanies] = useState([])
 
     useEffect(() => {
         axios.get('https://cogip.jonathan-manes.be/get-latest-invoices')
-        .then(res => setInvoices(res.data.invoices))
+        .then(res => setAllInvoices(res.data.invoices))
 
         axios.get('https://cogip.jonathan-manes.be/get-latest-contacts')
-        .then(res => setContacts(res.data.contacts))
+        .then(res => setAllContacts(res.data.contacts))
 
         axios.get('https://cogip.jonathan-manes.be/get-latest-companies')
-        .then(res => setCompanies(res.data.companies))
+        .then(res => setAllCompanies(res.data.companies))
 }, [])
 
 
@@ -29,13 +29,14 @@ const Homepage = () => {
         <img src="/images/hero_one.png"/>
         </section>
         <main>
-        <h2>Last Invoices</h2>
-        <table><thead><tr>
+        <h2>Last invoices</h2>
+        <div className="homepage__table-container">
+        <table className="homepage__table"><thead><tr>
         <th>Invoice number</th>
         <th>Company</th>
         <th>Created_at</th></tr></thead>
         <tbody>
-        {invoices.map((e,index) => 
+        {allinvoices.map((e,index) => 
         <tr>
             <td>{e.ref}</td> <td>{e.id_company}</td> <td>{e.created_at}</td>
         </tr>
@@ -43,15 +44,16 @@ const Homepage = () => {
         }
         </tbody>
         </table>
-        <h2>Last Contacts</h2>
-        <table><thead><tr>
+        </div>
+        <h2>Last contacts</h2>
+        <div className="homepage__table-container"><table className="homepage__table"><thead><tr>
         <th>Name</th>
         <th>Phone</th>
         <th>Mail</th>
         <th>Company</th>
         <th>Created_at</th></tr></thead>
         <tbody>
-        {contacts.map((e,index) => 
+        {allcontacts.map((e,index) => 
         <tr>
             <td>{e.name}</td> 
             <td>{e.phone}</td>
@@ -63,15 +65,17 @@ const Homepage = () => {
         }
         </tbody>
         </table>
-        <h2>Last Companies</h2> 
-        <table><thead><tr>
+        </div>
+        <h2>Last companies</h2> 
+        <div className="homepage__table-container">
+        <table className="homepage__table"><thead><tr>
         <th>Name</th>
         <th>TVA</th>
         <th>Country</th>
         <th>Type</th>
         <th>Created_at</th></tr></thead>
         <tbody>
-        {contacts.map((e,index) => 
+        {allcompanies.map((e,index) => 
         <tr>
             <td>{e.name}</td> 
             <td>{e.tva}</td>
@@ -83,6 +87,7 @@ const Homepage = () => {
         }
         </tbody>
         </table>
+        </div>
         </main>
         <section className="hero__wrapper hero__wrapper--lower"><h2>Work better in your company</h2>
         <img src="/images/hero_two.png"/>

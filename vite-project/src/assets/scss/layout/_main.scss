@@ -1,5 +1,7 @@
 main{
     position:relative;
+    font-family:inter;
+    width:100dvw;
 }
 
 main::before{
@@ -13,5 +15,24 @@ background-image:url('/images/background__shape.png');
 background-size:80%;
 background-repeat:no-repeat;
 background-position:bottom center;
+}
+
+h2{
+    width:80%;
+    margin:auto;
+    font-size:2rem;
+    font-weight:bolder;
+    font-family:$titlefont;
+    margin:calc($padding * 2) auto;
+}
+
+
+@media screen and (min-width:820px){
+
+    main::before{
+        height: 5rem;
+        top: -7rem;
+    }
 
 }
+
