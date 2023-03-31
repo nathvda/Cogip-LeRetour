@@ -1,7 +1,10 @@
 @import 'abstracts/variables';
 @import 'base/reset.scss';
+
 @import 'components/navigation';
 @import 'components/buttons';
+@import 'components/forms';
+@import 'components/modals';
 
 @import 'layout/header.scss/';
 @import 'layout/footer.scss/';

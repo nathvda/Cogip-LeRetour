@@ -11,3 +11,15 @@
 .button--primary{
     background:white;
 }
+
+.button--submit{
+    background:$yellow;
+    color:white;
+}
+
+.button--submit:focus{
+    background:$yellow;
+    color:white;
+    outline-offset:0.2rem;
+    outline:0.2rem solid $yellow;
+}

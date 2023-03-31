@@ -1,0 +1,53 @@
+.modal{
+    position:fixed;
+    inset:0;
+    background-color:rgba(255,255,255,0.3);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    backdrop-filter:blur($padding);
+    font-family:$mainfont;
+    display:none;
+
+    .modal-content{
+        background-color:white;
+        padding:$padding;
+        border-radius:calc($padding/2);
+        box-shadow:0.2rem 0.2rem 0 $yellow;
+        width:80%;
+
+        h3{
+            font-weight:bolder;
+            margin-bottom:$padding;
+            font-size:$medium;
+        }
+
+        .close-modal{
+            background:none;
+            border:none;
+            font-weight:bolder;
+            float:right;
+        }
+
+        label{
+            font-weight:bolder;
+            font-variant:capitalize;
+        }
+
+        input{
+            border:$grays 0.1rem solid;
+            padding:calc($padding / 2);
+            border-radius:calc($padding / 2);
+            margin-top:calc($padding/2);
+        }
+
+        input:focus{
+            outline:$yellow 0.2rem solid;
+            border:white 0.1rem solid;
+        }
+
+    }
+
+    
+
+}
