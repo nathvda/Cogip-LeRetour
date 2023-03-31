@@ -1,5 +1,9 @@
-@import 'abstracts/_variables';
+@import 'abstracts/variables';
 @import 'base/reset.scss';
 @import 'components/navigation';
 @import 'components/buttons';
-@import 'layout/_header.scss/';
+
+@import 'layout/header.scss/';
+@import 'layout/footer.scss/';
+
+@import 'pages/homepage/';
