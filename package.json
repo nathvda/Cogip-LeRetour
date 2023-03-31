@@ -1,0 +1,19 @@
+{
+  "name": "cogip-leretour",
+  "version": "1.0.0",
+  "description": "Hello and welcome to my repository. My name is Nathalie and I am currently a Junior Web Developer.\r This project was created on March 31st 2023.\r It is a duplicate in some way of the other CogipProject you can find on my repository, with the difference that I will be taking the role of a Frontend developer this time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathvda/Cogip-LeRetour.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathvda/Cogip-LeRetour/issues"
+  },
+  "homepage": "https://github.com/nathvda/Cogip-LeRetour#readme"
+}
