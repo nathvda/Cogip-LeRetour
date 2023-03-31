@@ -1,0 +1,13 @@
+header{
+    background-color:$yellow;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items: center;
+    gap:$padding;
+    padding:calc($padding * 2);
+    background-image:url('/images/background__shape.png');
+    background-size:80%;
+    background-repeat:no-repeat;
+    background-position:bottom center;
+}

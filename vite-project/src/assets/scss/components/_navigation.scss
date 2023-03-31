@@ -1,0 +1,22 @@
+.homepage__navigation{
+    font-size:$medium;
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+    gap: $padding;
+    flex-direction:column;
+
+    a{
+        text-decoration:none;
+        color:$black;
+        font-family:$titlefont;
+        padding: $padding;
+        font-weight:bolder;
+
+        &.active{
+            border:1px solid black;
+            
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.button{
+    background:none;
+    border:none;
+    border-radius:calc($padding/2);
+    font-size:$medium;
+    font-family:$titlefont;
+    padding:calc($padding/2) $padding;
+    font-weight:bolder;
+}
+
+.button--primary{
+    background:white;
+}
