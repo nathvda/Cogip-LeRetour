@@ -2,6 +2,7 @@ main{
     position:relative;
     font-family:inter;
     width:100dvw;
+    padding-bottom:calc(2 * $padding);
 }
 
 main::before{

@@ -24,6 +24,7 @@ footer{
 
     .informations{
         display:flex;
+        align-items:center;
         flex-direction:column;
         gap:$padding;
 
@@ -37,6 +38,7 @@ footer{
     .informations div{
         display:flex;
         align-items:flex-start;
+        justify-content:center;
     
     }
 
@@ -62,6 +64,23 @@ footer{
             text-transform:uppercase;
             color:$grays;
         }
+
+    }
+
+}
+
+
+@media screen and (min-width:820px){
+
+    footer img{
+        flex-grow:0;
+    }
+
+    footer div{
+        display:flex;
+        justify-content:space-between;
+        width:100%;
+        margin:0 $padding;
 
     }
 

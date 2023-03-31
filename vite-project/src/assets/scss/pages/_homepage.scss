@@ -31,7 +31,6 @@
     background-position:bottom center;
 }
 
-
 @media screen and (min-width:820px){
     .hero__wrapper{
         flex-direction:row;
@@ -39,6 +38,50 @@
         align-items:center;
 
         img{width:21rem}
+
+        h2{ 
+            font-family: Roboto;
+            font-weight: bolder;
+            text-transform: uppercase;
+            margin: 1rem 12rem 0 4rem;
+        }
     }
+
+    .hero__wrapper--lower{
+        background-size: 50%;
+        background-position: bottom right;
+    }
+    
+
+}
+
+@media screen and (min-width:1100px){
+    .hero__wrapper{
+        flex-direction:row;
+        justify-content:space-around;
+        align-items:center;
+
+        img{width:34rem}
+
+        h1{
+            width: 44rem;
+            font-size:5rem;
+        }
+
+        h2{ 
+            font-family: Roboto;
+            font-weight: bolder;
+            text-transform: uppercase;
+            margin: 1rem 12rem 0 4rem;
+            font-size: 5rem;
+            width: 34rem;
+        }
+    }
+
+    .hero__wrapper--lower {
+        background-size: auto 100%;
+        background-position: bottom right;
+    }
+    
 
 }
