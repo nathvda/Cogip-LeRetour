@@ -1,0 +1,35 @@
+.dashboard__body{
+    font-family:inter;
+    background-color:#F5F5FB;
+
+    h3{
+        font-size:1.5rem;
+        font-weight:bolder;
+        padding:1rem;
+    }
+
+    h6{
+        padding:0 1rem 1rem;
+    }
+}
+
+.dashboard__header{
+    background-color:#9698D6;
+    color:white;
+    padding:1rem;
+    position:relative;
+
+    h4{
+        font-size:1.5rem;
+        padding:1rem;
+    }
+
+    img{
+        position:absolute;
+        height:4rem;
+        top:-3rem;
+        right:1rem;
+    }
+
+
+}
