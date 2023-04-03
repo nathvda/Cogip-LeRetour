@@ -41,12 +41,51 @@ const Stats = () => {
                 <div>{fullcompanies.length}
                 companies</div>
             
-            </div></section> 
+            </div></section>
+
+            <section><h4>Last contacts</h4>
+            <div className="table__container">
+                <table><thead><tr><th>Name</th>
+                <th>Phone</th>
+                <th>Email</th></tr></thead>
+                <tbody>
+                {
+                allcontacts.map(e => (
+                    <tr><td>{e.name}</td><td>{e.phone}</td><td>{e.email}</td></tr>
+                ))
+                }
+                </tbody>
+                </table>
+            </div></section>
+
             <section><h4>Last invoices</h4>
             <div className="table__container">
-               {
-                all.invoices
-               }
+                <table><thead><tr><th>Invoice number</th>
+                <th>Dates</th>
+                <th>Company</th></tr></thead>
+                <tbody>
+                {
+                allinvoices.map(e => (
+                    <tr><td>{e.ref}</td><td>{e.created_at}</td><td>{e.id_company}</td></tr>
+                ))
+                }
+                </tbody>
+                </table>
+            </div></section>
+
+            <section><h4>Last companies</h4>
+            <div className="table__container">
+                <table><thead><tr><th>Name</th>
+                <th>TVA</th>
+                <th>Country</th></tr></thead>
+                <tbody>
+                {
+                allcompanies.map(e => (
+                    <tr><td>{e.name}</td><td>{e.tva}</td><td>{e.country}</td></tr>
+                ))
+                }
+                </tbody>
+                </table>
             </div></section>
         </div>
     );
