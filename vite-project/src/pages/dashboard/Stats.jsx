@@ -31,14 +31,14 @@ const Stats = () => {
 }, [])
 
     return (
-        <div>
+        <div className="dashboard__outlet">
             <section><h4>Statistics</h4>
             <div className="dashboard__stats">
-                <div>{fullinvoices.length}
+                <div><span>{fullinvoices.length}</span>
                 invoices</div>
-                <div>{fullcontacts.length}
+                <div><span>{fullcontacts.length}</span>
                 contacts</div>
-                <div>{fullcompanies.length}
+                <div><span>{fullcompanies.length}</span>
                 companies</div>
             
             </div></section>
