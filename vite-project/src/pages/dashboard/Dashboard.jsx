@@ -4,7 +4,7 @@ import {Outlet} from 'react-router-dom';
 
 const Dashboard = () => {
     return (
-        <div>
+        <div className="dashboard__main">
             <Sidebar/>
             <div className="dashboard__body">
             <h3>Dashboard</h3>

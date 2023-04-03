@@ -99,4 +99,101 @@ div {
         }
 }
 
+
+.dashboard__form{
+    background-color:white;
+
+    h4{
+        font-weight:bolder;
+        padding:$padding;
+        border-bottom:1px solid #efefef;
+    }
+
+    label{
+        font-weight:bolder;
+        margin:calc($padding / 2) $padding;
+        color:#9698D6;
+    }
+    
+    input{
+        background-color:#F5F5F5;
+        border:none;
+        padding:$padding;
+        margin:0 $padding;
+    }
+
+    button{
+        color:white;
+        padding:$padding;
+        background-color:#9698D6;
+        border-radius:none;
+        margin:$padding;
+        border:none;
+        width:calc(100% - ($padding * 2));
+
+    }
+}
+
+}
+
+@media screen and (min-width:820px){
+
+   .dashboard__main{
+    display:flex;
+   }
+
+   .dashboard__body{
+    padding:calc($padding * 2);
+   }
+
+   .dashboard__header{
+    border-radius:0.5rem;
+    margin-bottom:1rem;
+   }
+
+   .dashboard__outlet{
+    section{
+    border-radius:0.5rem;
+    width:32rem;
+   }
+   }
+
+   .dashboard__form{
+    border-radius:0.5rem;
+   }
+
+}
+
+
+@media screen and (min-width:1000px){
+
+    .dashboard__body{
+        width:100%;
+    }
+
+    .dashboard__header {
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        width: 96%;
+        padding: 2rem;
+    }
+
+    .dashboard__outlet{
+        column-count:2;
+        display:block;
+
+        section{
+            break-inside:avoid;
+            margin-bottom:$padding;
+            width:46rem;
+        }
+    }
+
+    .dashboard__header img {
+        position: absolute;
+        height: 16rem;
+        top: -9rem;
+        right: 1rem;
+    }
+
 }

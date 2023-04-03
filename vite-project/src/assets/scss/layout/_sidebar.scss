@@ -3,6 +3,7 @@
     flex-direction:column;
     justify-content:flex-start;
     min-height:100vh;
+    max-height:100vh;
 }
 
 .sidebar__top{
@@ -21,7 +22,7 @@
     }
 
     h2{
-        word-break: break-word;
+        word-break: normal;
         width:50%;
         text-align:center;
     }
@@ -67,3 +68,7 @@
         font-size:1.1rem;
     }
 }
+
+@media screen and (min-width:820px){
+ 
+ }

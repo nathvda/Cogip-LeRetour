@@ -4,37 +4,3 @@
     margin-bottom:$padding;
 }
 
-
-.dashboard__form{
-    background-color:white;
-
-    h4{
-        font-weight:bolder;
-        padding:$padding;
-        border-bottom:1px solid #efefef;
-    }
-
-    label{
-        font-weight:bolder;
-        margin:calc($padding / 2) $padding;
-        color:#9698D6;
-    }
-    
-    input{
-        background-color:#F5F5F5;
-        border:none;
-        padding:$padding;
-        margin:0 $padding;
-    }
-
-    button{
-        color:white;
-        padding:$padding;
-        background-color:#9698D6;
-        border-radius:none;
-        margin:$padding;
-        border:none;
-        width:calc(100% - ($padding * 2));
-
-    }
-}
