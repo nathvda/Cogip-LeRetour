@@ -31,7 +31,7 @@ const Stats = () => {
 }, [])
 
     return (
-        <div className="dashboard__outlet">
+        <>
             <section><h4>Statistics</h4>
             <div className="dashboard__stats">
                 <div><span>{fullinvoices.length}</span>
@@ -87,7 +87,7 @@ const Stats = () => {
                 </tbody>
                 </table>
             </div></section>
-        </div>
+        </>
     );
 };
 

@@ -62,7 +62,7 @@ div {
     }
 }
 
-.dashboard__outlet {
+.dashboard__outlet{
 	display: flex;
 	flex-direction: column;
     gap:$padding;
@@ -97,5 +97,6 @@ div {
                 }
             }
         }
-    }
+}
+
 }

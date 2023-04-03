@@ -14,7 +14,7 @@ const Dashboard = () => {
                 <h4>Welcome back Jean-Christian!</h4>
                 <p>You can here add an invoice, a company and some contacts</p>
             </section>
-            <Outlet/>
+            <div className="dashboard__outlet"><Outlet/></div>
             </div>
         </div>
     );
