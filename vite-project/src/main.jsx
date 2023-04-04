@@ -6,6 +6,7 @@ import Homepage from './pages/Homepage';
 import Invoices from './pages/Invoices';
 import Companies from './pages/Companies';
 import Contacts from './pages/Contacts';
+import Invoice from './pages/Invoice';
 import Dashboard from './pages/dashboard/Dashboard';
 import InvoicesDashboard from './pages/dashboard/InvoicesDashboard';
 import CompaniesDashboard from './pages/dashboard/CompaniesDashboard';
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
     <Route path="/invoices" element={<Invoices/>}/>
     <Route path="/companies" element={<Companies/>}/>
     <Route path="/contacts" element={<Contacts/>}/>
+    <Route path="/invoices/{id}" element={<Invoice/>}/>
     <Route path="/dashboard" element={<Dashboard/>}>
       <Route path="/dashboard/" element={<Stats/>}/>
       <Route path="/dashboard/invoices" element={<InvoicesDashboard/>}/>

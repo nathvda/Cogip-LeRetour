@@ -14,11 +14,14 @@
         background-color:$yellow;
         padding:$padding;
         font-weight:bolder;
+        text-align:left;
+        min-width:12rem;
     }
 
     td{
         padding:$padding;
-        min-width:max-content;
+        min-width:12rem;
+
     }
     tr:nth-child(even){
         background-color:#F5F5F5;

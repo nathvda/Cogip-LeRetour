@@ -37,7 +37,7 @@ const Homepage = () => {
         <th>Created_at</th></tr></thead>
         <tbody>
         {allinvoices.map((e,index) => 
-        <tr>
+        <tr key={index}>
             <td>{e.ref}</td> <td>{e.id_company}</td> <td>{e.created_at}</td>
         </tr>
         )

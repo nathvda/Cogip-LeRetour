@@ -73,7 +73,8 @@ const Stats = () => {
                 </table>
             </div></section>
 
-            <section><h4>Last companies</h4>
+            <section>
+                <h4>Last companies</h4>
             <div className="table__container">
                 <table><thead><tr><th>Name</th>
                 <th>TVA</th>
