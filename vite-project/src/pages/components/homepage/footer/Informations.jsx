@@ -10,7 +10,7 @@ const Informations = () => {
             </div>
             <div className="informations__social">
                 <span>Social Media</span>
-                <span><img src="/images/icons/Facebook.svg"/>
+                <span className="informations__icons"><img src="/images/icons/Facebook.svg"/>
                 <img src="/images/icons/Twitter.svg"/>
                 <img src="/images/icons/Linkedin.svg"/>
                 <img src="/images/icons/Youtube.svg"/>

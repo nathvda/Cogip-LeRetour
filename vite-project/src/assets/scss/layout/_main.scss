@@ -1,8 +1,29 @@
+#root {
+	display: flex;
+	flex-direction: column;
+    min-height: 100vh;
+}
+
 main{
     position:relative;
     font-family:inter;
-    width:100dvw;
+    width:99dvw;
     padding-bottom:calc(2 * $padding);
+
+    .project {
+        position: absolute;
+        right: 0;
+        display:none;
+       
+    }
+
+    .lightbulb {
+        position: absolute;
+        left: 0;
+        display:none;
+
+    }
+
 }
 
 main::before{
@@ -23,7 +44,7 @@ h2{
     margin:auto;
     font-size:2rem;
     font-weight:bolder;
-    font-family:$titlefont;
+    font-family:$mainfont;
     margin:calc($padding * 2) auto;
 }
 
@@ -34,6 +55,19 @@ h2{
         height: 5rem;
         top: -7rem;
     }
+
+    main{.project {
+        position: absolute;
+        right: 0;
+        display:block;
+    }
+
+    .lightbulb {
+        position: absolute;
+        left: 0;
+        display:block;
+    }
+}
 
 }
 

@@ -45,6 +45,7 @@ const Homepage = () => {
         </tbody>
         </table>
         </div>
+        <img className="project" src="/images/project.png"/>
         <h2>Last contacts</h2>
         <div className="homepage__table-container"><table className="homepage__table"><thead><tr>
         <th>Name</th>
@@ -66,6 +67,7 @@ const Homepage = () => {
         </tbody>
         </table>
         </div>
+        <img className="lightbulb" src="/images/bulb.png"/>
         <h2>Last companies</h2> 
         <div className="homepage__table-container">
         <table className="homepage__table"><thead><tr>
