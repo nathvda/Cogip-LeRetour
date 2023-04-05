@@ -6,7 +6,7 @@ const Sidebar = () => {
         <div className="sidebar">
             <div className="sidebar__top">
                 <img src="/images/jeanchris.png"/>
-                <h2>Jean Christian Ranu</h2>
+                <h2 className="sidebar__title">Jean Christian Ranu</h2>
             </div> 
            <div className="sidebar__links">
             <NavLink to="./">

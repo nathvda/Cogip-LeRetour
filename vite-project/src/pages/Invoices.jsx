@@ -61,6 +61,7 @@ const Invoices = () => {
         <>
             <Header/>
         <main>
+        <input className="searchbar" placeholder="Search invoices" type="text" onChange={(e) => search(e.target.value)}/>
         <h2 className="title--decorated">All Invoices</h2>
         <div className="homepage__table-container">
         <table className="homepage__table"><thead><tr>

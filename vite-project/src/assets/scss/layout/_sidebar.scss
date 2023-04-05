@@ -24,6 +24,8 @@
     h2{
         word-break: normal;
         width:50%;
+        font-size:1.5rem;
+        margin:0;
         text-align:center;
     }
 }
@@ -70,5 +72,16 @@
 }
 
 @media screen and (min-width:820px){
+
+    
+    .sidebar__title{
+        word-break: normal;
+        width:100%;
+        font-size:1.5rem;
+        margin:0;
+        text-align:center;
+        max-width:unset;
+
+}
  
  }

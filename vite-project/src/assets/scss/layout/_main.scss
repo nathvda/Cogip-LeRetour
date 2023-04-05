@@ -43,18 +43,31 @@ h2{
     width:80%;
     margin:auto;
     font-size:2rem;
-    font-weight:bolder;
+    font-weight:900;
     font-family:$mainfont;
-    margin:calc($padding * 2) auto;
 }
 
+.title--decorated {
+	position: relative;
+	z-index: 1;
+}
 
 @media screen and (min-width:820px){
 
     main::before{
+
         height: 5rem;
-        top: -7rem;
+        top: -4rem;
+
     }
+
+    h2{
+        font-size:3.75rem;
+        margin:calc($padding * 2) auto;
+        max-width: calc(100% - 35rem);
+
+    }
+    
 
     main{.project {
         position: absolute;
@@ -67,7 +80,21 @@ h2{
         left: 0;
         display:block;
     }
+
 }
+
+.title--decorated::after {
+	content: '';
+	background-color: $yellow;
+	height: 1.68rem;
+	width: 17.5rem;
+	display: block;
+	left: 8rem;
+	position: absolute;
+	top: 2rem;
+	z-index: -1;
+}
+
 
 }
 

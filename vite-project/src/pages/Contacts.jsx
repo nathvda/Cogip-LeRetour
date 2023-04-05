@@ -23,9 +23,9 @@ const Contacts = () => {
     })
 
     function search(haha){
-        
-    console.log(contacts.filter((e) => e.name.includes(haha)));
-
+        console.log("searching for " + haha);
+        const filtered = contacts.filter((e) => e['name'].includes(haha));
+        console.log(filtered);
     }
 
     function PaginatedItems({ itemsPerPage }) {
@@ -35,9 +35,7 @@ const Contacts = () => {
         const endOffset = itemOffset + itemsPerPage;
         // Simulate fetching items from another resources.
         // (This could be items from props; or items loaded in a local state
-        // from an API endpoint with useEffect and useState)
-        console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-        
+        // from an API endpoint with useEffect and useState)        
         setPageCount(Math.ceil(contacts.length / itemsPerPage));
 
         // Invoke when user click to request another page.
@@ -62,9 +60,6 @@ const Contacts = () => {
 
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % contacts.length;
-        console.log(
-        `User requested page number ${event.selected}, which is offset ${newOffset}`
-        );
         setItemOffset(newOffset);
     };
 
@@ -72,8 +67,8 @@ const Contacts = () => {
         <>
         <Header/>
         <main>
+        <input className="searchbar" placeholder="Search contacts" type="text" onChange={(e) => search(e.target.value)}/>
         <h2 className="title--decorated">All contacts</h2>
-        <input type="text" onChange={(e) => search(e.target.value)}/>
         <div className="homepage__table-container"><table className="homepage__table"><thead><tr>
         <th>Name</th>
         <th>Phone</th>

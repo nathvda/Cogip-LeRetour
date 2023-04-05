@@ -63,7 +63,9 @@ const Companies = () => {
         <>
         <Header/>
         <main>  
-        <h2 className="title--decorated">All companies</h2> 
+        
+        <h2 className="title--decorated">All companies</h2>
+        <input className="searchbar" placeholder="Search companies" type="text" onChange={(e) => search(e.target.value)}/> 
         <div className="homepage__table-container">
         <table className="homepage__table"><thead><tr>
         <th>Name</th>

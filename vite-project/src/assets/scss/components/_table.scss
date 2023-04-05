@@ -28,3 +28,25 @@
     }
 }
 }
+
+@media screen and (min-width:1100px) {
+    
+    .homepage__table-container{
+        max-width: calc(100% - 35rem);
+        margin-bottom: 6.375rem;
+
+
+        .homepage__table{
+            margin: auto;
+            overflow: hidden;
+            overflow-x: hidden;
+            overflow-x: scroll;
+            width: calc(100% - 18rem);
+
+            th{
+                font-size: 1.25rem;
+            }
+    }
+}
+
+}
