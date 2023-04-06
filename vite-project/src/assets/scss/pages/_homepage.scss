@@ -11,9 +11,10 @@
     }
 
     h2{
-        font-size:calc($largest * 0.50);
-        font-family:$titlefont;
-        font-weight:bolder;
+        font-size:$huge;
+        font-style:normal;
+        font-family:Inter;
+        font-weight:900;
         text-transform:uppercase;
         margin:0 calc($padding*2);
     }
@@ -40,8 +41,8 @@
         img{width:21rem}
 
         h2{ 
-            font-family: Roboto;
-            font-weight: bolder;
+            font-family: Inter;
+            font-weight: 900;
             text-transform: uppercase;
             margin: 1rem 12rem 0 4rem;
         }
@@ -58,24 +59,30 @@
 @media screen and (min-width:1100px){
     .hero__wrapper{
         flex-direction:row;
-        justify-content:space-around;
+        justify-content:center;
         align-items:center;
 
-        img{width:34rem}
+        img{width:46rem}
 
         h1{
             width: 44rem;
             font-size:$largest;
+            font-family:inter;
+            font-weight:900;
         }
 
         h2{ 
-            font-family: Roboto;
-            font-weight: bolder;
+            font-family: Inter;
+            font-weight: 900;
             text-transform: uppercase;
             margin: 1rem 12rem 0 4rem;
             font-size: 5rem;
             width: 34rem;
         }
+    }
+
+    .hero__wrapper--upper{
+        height: 38.813rem;
     }
 
     .hero__wrapper--lower {

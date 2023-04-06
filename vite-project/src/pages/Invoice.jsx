@@ -12,13 +12,18 @@ const Invoice = () => {
     useEffect(() => {
         axios.get(`https://cogip.jonathan-manes.be/get-invoice/${id}`)
         .then(res => setInvoice(res.data.invoice));
-    })
+    },[])
 
     return (
         <>
         <Header/>
         <main>
-        {invoice.ref}
+        <h2 className="title--decorated">{invoice.ref}</h2>
+        <p className="individual__content">
+            <span><b>Reference</b>:{invoice.ref}</span>
+            <span><b>Company</b>:{invoice.company}</span>
+            <span><b>Created at</b>:{invoice.created_at}</span>
+            </p>
         </main>
         <Footer/>
         </>

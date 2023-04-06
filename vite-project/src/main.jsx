@@ -13,6 +13,7 @@ import CompaniesDashboard from './pages/dashboard/CompaniesDashboard';
 import ContactsDashboard from './pages/dashboard/ContactsDashboard';
 import Stats from './pages/dashboard/Stats';
 import Contact from './pages/Contact';
+import Company from './pages/Company';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
     <Route path="/contacts" element={<Contacts/>}/>
     <Route path="/invoice/:id" element={<Invoice/>}/>
     <Route path="/contact/:id" element={<Contact/>}/>
+    <Route path="/company/:id" element={<Company/>}/>
     <Route path="/dashboard" element={<Dashboard/>}>
       <Route path="/dashboard/" element={<Stats/>}/>
       <Route path="/dashboard/invoices" element={<InvoicesDashboard/>}/>

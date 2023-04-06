@@ -12,13 +12,20 @@ const Contact = () => {
     useEffect(() => {
         axios.get(`https://cogip.jonathan-manes.be/get-contact/${id}`)
         .then(res => setContact(res.data.contact));
-    })
+    }, [id])
 
     return (
         <>
         <Header/>
         <main>
-        {contact.name}
+        <h2 className="title--decorated">{contact.name}</h2>
+        <p className="individual__content">
+            <span><b>Contact</b>: {contact.name}</span>
+            <span><b>Phone</b>: {contact.phone}</span>
+            <span><b>Email</b>: {contact.email}</span>
+            <span><b>Company</b>: {contact['company']}</span>
+        <img className="contact__img" src="/images/user1_bertram.webp"/>
+        </p>
         </main>
         <Footer/>
         </>

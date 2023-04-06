@@ -1,0 +1,54 @@
+.individual__content {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	width: 71%;
+	gap: 0.6rem;
+}
+
+.individual__content b {
+	font-weight: bolder;
+}
+
+.contact__img {
+	width: 16rem;
+	border-radius: 16rem;
+	position: absolute;
+	right: 16rem;
+}
+
+.contacts__wrapper {
+	width: calc(100% - 35rem);
+	margin: auto; 
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 5rem;
+
+}
+
+.people__card {
+	width: 23.5rem;
+	overflow: hidden;
+	height: 12.063rem;
+	background-color: #F5F5F5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;    
+    border-radius:2rem;
+    box-shadow: 0px 0px 37px -21px rgba(0, 0, 0, 0.25);
+
+    img {
+        height: 8.5rem;
+        aspect-ratio: 1;
+        border-radius: 100%;
+    }
+
+    span{
+        font-size:$bigger;
+        font-weight:900;
+    }
+
+
+}
+
+
