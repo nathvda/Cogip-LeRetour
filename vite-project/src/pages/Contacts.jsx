@@ -50,7 +50,7 @@ const Contacts = () => {
                 <td>{item.name}</td> 
                 <td>{item.phone}</td>
                 <td>{item.email}</td>
-                <td>{item.company_id}</td>
+                <td>{item.company.name}</td>
                 <td>{item.created_at}</td>
             </tr>
                 ))}

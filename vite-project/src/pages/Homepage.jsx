@@ -38,7 +38,7 @@ const Homepage = () => {
         <tbody>
         {allinvoices.map((e,index) => 
         <tr key={index}>
-            <td>{e.ref}</td> <td>{e.id_company}</td> <td>{e.created_at}</td>
+            <td>{e.ref}</td> <td>{e.name}</td> <td>{e.created_at}</td>
         </tr>
         )
         }
@@ -59,7 +59,7 @@ const Homepage = () => {
             <td>{e.name}</td> 
             <td>{e.phone}</td>
             <td>{e.email}</td>
-            <td>{e.company_id}</td>
+            <td>{e.company.name}</td>
             <td>{e.created_at}</td>
         </tr>
         )
@@ -82,7 +82,7 @@ const Homepage = () => {
             <td>{e.name}</td> 
             <td>{e.tva}</td>
             <td>{e.country}</td>
-            <td>{e.type_id}</td>
+            <td>{`${(item.type_id === 1) ? "Client" : "Supplier"}`}</td>
             <td>{e.created_at}</td>
         </tr>
         )

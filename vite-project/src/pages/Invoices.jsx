@@ -42,7 +42,7 @@ const Invoices = () => {
             {
             currentItems && currentItems.map((item) => (
                 <tr>
-                <td><Link to={`/invoices/${item.id}`}>{item.ref}</Link></td> <td>{item.id_company}</td> <td>{item.created_at}</td>
+                <td><Link to={`/invoices/${item.id}`}>{item.ref}</Link></td> <td>{item.name}</td> <td>{item.created_at}</td>
             </tr>
                 ))}
                 </>

@@ -66,7 +66,7 @@ const Stats = () => {
                 <tbody>
                 {
                 allinvoices.map(e => (
-                    <tr><td>{e.ref}</td><td>{e.created_at}</td><td>{e.id_company}</td></tr>
+                    <tr><td>{e.ref}</td><td>{e.created_at}</td><td>{e.name}</td></tr>
                 ))
                 }
                 </tbody>
