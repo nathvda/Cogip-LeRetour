@@ -4,20 +4,32 @@ import axios from 'axios';
 import Header from './components/homepage/header/Header';
 import Footer from './components/homepage/footer/Footer';
 import ReactPaginate from 'react-paginate';
+import {Link} from 'react-router-dom';
 
 const Companies = () => {
     
     const [companies,setCompanies] = useState([]);
     const [itemOffset, setItemOffset] = useState(0);
     const [pageCount, setPageCount] = useState(5);
+    const [originaldata, setOriginalData] = useState([])
     let itemsPerPage = 10;
     const endOffset = itemOffset + itemsPerPage;
     const currentItems = companies.slice(itemOffset, endOffset);
 
     useEffect(() => {
         axios.get('https://cogip.jonathan-manes.be/get-companies')
-        .then(res => setCompanies(res.data.companies))
-    })
+        .then(res => {
+            setOriginalData(res.data.companies.sort((a,b) => a.name > b.name));
+            setCompanies(res.data.companies.sort((a,b) => a.name > b.name));
+        })
+        
+    },[])
+
+    function search(haha){
+        const filtered = originaldata.filter((e) => e['name'].includes(haha) || e['country'].includes(haha) || e['tva'].includes(haha));
+        setCompanies(filtered);
+        setKeyword(haha);
+    }
     
         function PaginatedItems({ itemsPerPage }) {
         // Here we use item offsets; we could also use page offsets
@@ -40,7 +52,7 @@ const Companies = () => {
             {
             currentItems && currentItems.map((item) => (
                 <tr>
-                <td>{item.name}</td> 
+                <td><Link to={`/company/${item.id}`}>{item.name}</Link></td> 
                 <td>{item.tva}</td>
                 <td>{item.country}</td>
                 <td>{`${(item.type_id === 1) ? "Client" : "Supplier"}`}</td>
@@ -63,10 +75,9 @@ const Companies = () => {
         <>
         <Header/>
         <main>  
-        
-        <h2 className="title--decorated">All companies</h2>
-        <input className="searchbar" placeholder="Search companies" type="text" onChange={(e) => search(e.target.value)}/> 
-        <div className="homepage__table-container">
+        <div className="title__wrapper"><input className="searchbar" placeholder="Search companies" type="text" onChange={(e) => search(e.target.value)}/> 
+        <h2 className="title--decorated">All companies</h2> 
+        </div><div className="homepage__table-container">
         <table className="homepage__table"><thead><tr>
         <th>Name</th>
         <th>TVA</th>

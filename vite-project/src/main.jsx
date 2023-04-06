@@ -12,6 +12,7 @@ import InvoicesDashboard from './pages/dashboard/InvoicesDashboard';
 import CompaniesDashboard from './pages/dashboard/CompaniesDashboard';
 import ContactsDashboard from './pages/dashboard/ContactsDashboard';
 import Stats from './pages/dashboard/Stats';
+import Contact from './pages/Contact';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,13 +22,14 @@ const router = createBrowserRouter(
     <Route path="/invoices" element={<Invoices/>}/>
     <Route path="/companies" element={<Companies/>}/>
     <Route path="/contacts" element={<Contacts/>}/>
-    <Route path="/invoices/{id}" element={<Invoice/>}/>
+    <Route path="/invoice/:id" element={<Invoice/>}/>
+    <Route path="/contact/:id" element={<Contact/>}/>
     <Route path="/dashboard" element={<Dashboard/>}>
       <Route path="/dashboard/" element={<Stats/>}/>
       <Route path="/dashboard/invoices" element={<InvoicesDashboard/>}/>
       <Route path="/dashboard/companies" element={<CompaniesDashboard/>}/>
       <Route path="/dashboard/contacts" element={<ContactsDashboard/>}/>
-     </Route>
+      </Route>
 
     </>
   )

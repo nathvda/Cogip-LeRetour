@@ -9,11 +9,11 @@ const CompaniesDashboard = () => {
     useEffect(() => {
         axios.get('https://cogip.jonathan-manes.be/get-companies')
         .then(res => setCompanies(res.data.companies))
-    })
+    },[])
 
     return (
         <>
-            <form className="dashboard__form" action="" method="post">
+            <form className="dashboard__form" action="/admin/add-company" method="post">
                 <h4>New company</h4>
                 <div className="form__field"><label htmlFor="type_id">Type</label>
                 <input type="text" name="type_id"/></div>

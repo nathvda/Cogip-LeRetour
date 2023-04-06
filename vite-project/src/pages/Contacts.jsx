@@ -4,10 +4,11 @@ import axios from 'axios';
 import Header from './components/homepage/header/Header';
 import Footer from './components/homepage/footer/Footer';
 import ReactPaginate from 'react-paginate';
+import {Link} from 'react-router-dom';
 
 const Contacts = () => {
     const [contacts, setContacts] = useState([]);
-    const [allcompanies, setAllCompanies] = useState([]);
+    const [originaldata, setOriginalData] = useState([])
     const [itemOffset, setItemOffset] = useState(0);
     const [pageCount, setPageCount] = useState(4);
     let itemsPerPage = 10;
@@ -16,16 +17,20 @@ const Contacts = () => {
 
     useEffect(() => {
         axios.get('https://cogip.jonathan-manes.be/get-contacts')
-        .then(res => setContacts(res.data.contacts))
+        .then(res =>{
 
-        axios.get('https://cogip.jonathan-manes.be/get-companies')
-        .then(res => setAllCompanies(res.data.companies))
-    })
+        setOriginalData(res.data.contacts.sort((a,b) => a.name > b.name));
+        setContacts(res.data.contacts.sort((a,b) => a.name > b.name));
+        }
+        )
+    
+    },[])
+
+
 
     function search(haha){
-        console.log("searching for " + haha);
-        const filtered = contacts.filter((e) => e['name'].includes(haha));
-        console.log(filtered);
+        const filtered = originaldata.filter((e) => e['name'].includes(haha));
+        setContacts(filtered);
     }
 
     function PaginatedItems({ itemsPerPage }) {
@@ -47,7 +52,7 @@ const Contacts = () => {
             {
             currentItems && currentItems.map((item) => (
                 <tr>
-                <td>{item.name}</td> 
+                <td><Link to={`/contact/${item.id}`}>{item.name}</Link></td> 
                 <td>{item.phone}</td>
                 <td>{item.email}</td>
                 <td>{item.company.name}</td>
@@ -67,8 +72,8 @@ const Contacts = () => {
         <>
         <Header/>
         <main>
-        <input className="searchbar" placeholder="Search contacts" type="text" onChange={(e) => search(e.target.value)}/>
-        <h2 className="title--decorated">All contacts</h2>
+        <div className="title__wrapper"><input className="searchbar" placeholder="Search contacts" type="text" onChange={(e) => search(e.target.value)}/>
+        <h2 className="title--decorated">All contacts</h2></div>
         <div className="homepage__table-container"><table className="homepage__table"><thead><tr>
         <th>Name</th>
         <th>Phone</th>

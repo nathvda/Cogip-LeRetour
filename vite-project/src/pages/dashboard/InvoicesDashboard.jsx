@@ -10,7 +10,7 @@ const InvoicesDashboard = () => {
     useEffect(() => {
         axios.get('https://cogip.jonathan-manes.be/get-invoices')
         .then(res => setInvoices(res.data.invoices))
-    })
+    },[])
     
     return (
         <>

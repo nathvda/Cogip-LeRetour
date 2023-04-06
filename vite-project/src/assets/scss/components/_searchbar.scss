@@ -1,8 +1,17 @@
+.title__wrapper {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
 .searchbar{
     height:3.131rem;
-    font-size:1.5rem;
+    font-size:$medium;
     border-radius:0.6rem;
     border:$grays 1px solid;
     padding-left:1rem;
     float:right;
+    width: 15.313rem;
+    align-self: flex-end;
+    margin-right: 17.5rem;
+    margin-bottom: 2.68rem;
 }

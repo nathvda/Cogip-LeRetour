@@ -9,7 +9,7 @@ const ContactsDashboard = () => {
     useEffect(() => {
         axios.get('https://cogip.jonathan-manes.be/get-contacts')
         .then(res => setContacts(res.data.contacts))
-    })
+    },[])
 
     return (
         <>

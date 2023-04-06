@@ -28,7 +28,7 @@ const Stats = () => {
 
         axios.get('https://cogip.jonathan-manes.be/get-companies')
         .then(res => setFullCompanies(res.data.companies))
-}, [])
+}, [fullcompanies])
 
     return (
         <>

@@ -82,7 +82,7 @@ const Homepage = () => {
             <td>{e.name}</td> 
             <td>{e.tva}</td>
             <td>{e.country}</td>
-            <td>{`${(item.type_id === 1) ? "Client" : "Supplier"}`}</td>
+            <td>{`${(e.type_id === 1) ? "Client" : "Supplier"}`}</td>
             <td>{e.created_at}</td>
         </tr>
         )

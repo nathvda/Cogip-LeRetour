@@ -10,6 +10,7 @@ const Invoices = () => {
     
     const [invoices, setInvoices] = useState([]);
     const [itemOffset, setItemOffset] = useState(0);
+    const [originaldata, setOriginalData] = useState([]);
     const [pageCount, setPageCount] = useState(4);
     let itemsPerPage = 10;
     const endOffset = itemOffset + itemsPerPage;
@@ -18,8 +19,17 @@ const Invoices = () => {
 
     useEffect(() => {
         axios.get('https://cogip.jonathan-manes.be/get-invoices')
-        .then(res => setInvoices(res.data.invoices))
-    })
+        .then(res => {
+            setOriginalData(res.data.invoices.sort((a,b) => a.created_at < b.created_at));
+            setInvoices(res.data.invoices.sort((a,b) => a.created_at < b.created_at));
+        }
+        )
+    },[])
+
+    function search(haha){
+        const filtered = originaldata.filter((e) => e['ref'].includes(haha));
+        setInvoices(filtered);
+    }
 
     function PaginatedItems({ itemsPerPage }) {
         // Here we use item offsets; we could also use page offsets
@@ -42,7 +52,7 @@ const Invoices = () => {
             {
             currentItems && currentItems.map((item) => (
                 <tr>
-                <td><Link to={`/invoices/${item.id}`}>{item.ref}</Link></td> <td>{item.name}</td> <td>{item.created_at}</td>
+                <td><Link to={`/invoice/${item.id}`}>{item.ref}</Link></td> <td>{item.name}</td> <td>{item.created_at}</td>
             </tr>
                 ))}
                 </>
@@ -61,8 +71,10 @@ const Invoices = () => {
         <>
             <Header/>
         <main>
-        <input className="searchbar" placeholder="Search invoices" type="text" onChange={(e) => search(e.target.value)}/>
-        <h2 className="title--decorated">All Invoices</h2>
+        <div className="title__wrapper">
+            <input className="searchbar" placeholder="Search invoices" type="text" onChange={(e) => search(e.target.value)}/>
+    
+        <h2 className="title--decorated">All Invoices</h2></div>
         <div className="homepage__table-container">
         <table className="homepage__table"><thead><tr>
         <th>Invoice number</th>

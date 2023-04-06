@@ -62,7 +62,7 @@ h2{
     }
 
     h2{
-        font-size:3.75rem;
+        font-size:$biggest;
         margin:calc($padding * 2) auto;
         max-width: calc(100% - 35rem);
 
