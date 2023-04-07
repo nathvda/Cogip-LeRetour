@@ -10,8 +10,12 @@ const Contact = () => {
     const [contact, setContact] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://cogip.jonathan-manes.be/get-contact/${id}`)
+        try{
+            axios.get(`https://cogip.jonathan-manes.be/get-contact/${id}`)
         .then(res => setContact(res.data.contact));
+        } catch(e){
+            console.log(e);
+        }
     }, [id])
 
     return (

@@ -18,12 +18,15 @@ const Invoices = () => {
 
 
     useEffect(() => {
-        axios.get('https://cogip.jonathan-manes.be/get-invoices')
+        try{ 
+            axios.get('https://cogip.jonathan-manes.be/get-invoices')
         .then(res => {
             setOriginalData(res.data.invoices.sort((a,b) => a.created_at < b.created_at));
             setInvoices(res.data.invoices.sort((a,b) => a.created_at < b.created_at));
         }
-        )
+        )} catch(e){
+            console.log(e);
+        }
     },[])
 
     function search(haha){
@@ -39,7 +42,6 @@ const Invoices = () => {
         // Simulate fetching items from another resources.
         // (This could be items from props; or items loaded in a local state
         // from an API endpoint with useEffect and useState)
-        console.log(`Loading items from ${itemOffset} to ${endOffset}`);
         
         setPageCount(Math.ceil(invoices.length / itemsPerPage));
 
@@ -61,9 +63,6 @@ const Invoices = () => {
 
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % invoices.length;
-        console.log(
-        `User requested page number ${event.selected}, which is offset ${newOffset}`
-        );
         setItemOffset(newOffset);
     };
 

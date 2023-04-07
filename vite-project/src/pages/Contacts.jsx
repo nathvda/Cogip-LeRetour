@@ -16,13 +16,17 @@ const Contacts = () => {
     const currentItems = contacts.slice(itemOffset, endOffset);
 
     useEffect(() => {
-        axios.get('https://cogip.jonathan-manes.be/get-contacts')
+        try{
+            axios.get('https://cogip.jonathan-manes.be/get-contacts')
         .then(res =>{
 
         setOriginalData(res.data.contacts.sort((a,b) => a.name > b.name));
         setContacts(res.data.contacts.sort((a,b) => a.name > b.name));
         }
         )
+    } catch (e) {
+        console.log(e);
+    }
     
     },[])
 

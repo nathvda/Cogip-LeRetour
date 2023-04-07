@@ -18,12 +18,12 @@ const LoginAndSignUp = () => {
                     <form method="post" action="">
                         <h3>Sign up</h3>
                     <div className="form__field">
-                        <label htmlFor="email">email address</label>
-                        <input type="text" id="email" name="email"/>  
+                        <label htmlFor="signup_email">email address</label>
+                        <input type="text" id="signup_email" name="email"/>  
                     </div>
                     <div className="form__field">
-                        <label htmlFor="password">password</label>
-                        <input type="password" id="password" name="password"/>  
+                        <label htmlFor="signup_password">password</label>
+                        <input type="password" id="signup_password" name="password"/>  
                     </div>
                     <div className="form__field">
                         <label htmlFor="password-confirm">password</label>

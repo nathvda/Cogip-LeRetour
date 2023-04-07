@@ -11,7 +11,7 @@ const Homepage = () => {
     const [allcompanies, setAllCompanies] = useState([])
 
     useEffect(() => {
-        axios.get('https://cogip.jonathan-manes.be/get-latest-invoices')
+        try{  axios.get('https://cogip.jonathan-manes.be/get-latest-invoices')
         .then(res => setAllInvoices(res.data.invoices))
 
         axios.get('https://cogip.jonathan-manes.be/get-latest-contacts')
@@ -19,6 +19,9 @@ const Homepage = () => {
 
         axios.get('https://cogip.jonathan-manes.be/get-latest-companies')
         .then(res => setAllCompanies(res.data.companies))
+    }catch (e){
+        console.log(e);
+    }
 }, [])
 
 
@@ -26,7 +29,7 @@ const Homepage = () => {
         <>
         <Header/>
         <section className="hero__wrapper hero__wrapper--upper"><h1>Manage your customers and invoices easily</h1>
-        <img src="/images/hero_one.png"/>
+        <img src="/images/hero_one.webp" alt=""/>
         </section>
         <main>
         <h2>Last invoices</h2>
@@ -45,7 +48,7 @@ const Homepage = () => {
         </tbody>
         </table>
         </div>
-        <img className="project" src="/images/project.png"/>
+        <img className="project" src="/images/project.png" loading="lazy" alt=""/>
         <h2>Last contacts</h2>
         <div className="homepage__table-container"><table className="homepage__table"><thead><tr>
         <th>Name</th>
@@ -67,7 +70,7 @@ const Homepage = () => {
         </tbody>
         </table>
         </div>
-        <img className="lightbulb" src="/images/bulb.png"/>
+        <img className="lightbulb" src="/images/bulb.png" loading="lazy" alt=""/>
         <h2>Last companies</h2> 
         <div className="homepage__table-container">
         <table className="homepage__table"><thead><tr>
@@ -92,7 +95,7 @@ const Homepage = () => {
         </div>
         </main>
         <section className="hero__wrapper hero__wrapper--lower"><h2>Work better in your company</h2>
-        <img src="/images/hero_two.png"/>
+        <img src="/images/hero_two.webp" alt=""/>
         </section>
         <Footer/>
         </>

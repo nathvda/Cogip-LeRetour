@@ -10,8 +10,11 @@ const Invoice = () => {
     const [invoice, setInvoice] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://cogip.jonathan-manes.be/get-invoice/${id}`)
+        try{axios.get(`https://cogip.jonathan-manes.be/get-invoice/${id}`)
         .then(res => setInvoice(res.data.invoice));
+    } catch (e) {
+        console.log(e);
+    }
     },[])
 
     return (

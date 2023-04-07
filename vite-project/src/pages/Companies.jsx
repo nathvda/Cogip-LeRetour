@@ -17,11 +17,15 @@ const Companies = () => {
     const currentItems = companies.slice(itemOffset, endOffset);
 
     useEffect(() => {
+        try{
         axios.get('https://cogip.jonathan-manes.be/get-companies')
         .then(res => {
             setOriginalData(res.data.companies.sort((a,b) => a.name > b.name));
             setCompanies(res.data.companies.sort((a,b) => a.name > b.name));
         })
+    } catch (e) {
+        console.log(e);
+    }
         
     },[])
 
@@ -39,7 +43,6 @@ const Companies = () => {
         // Simulate fetching items from another resources.
         // (This could be items from props; or items loaded in a local state
         // from an API endpoint with useEffect and useState)
-        console.log(`Loading items from ${itemOffset} to ${endOffset}`);
         
         setPageCount(Math.ceil(companies.length / itemsPerPage));
 
@@ -65,9 +68,6 @@ const Companies = () => {
 
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % companies.length;
-        console.log(
-        `User requested page number ${event.selected}, which is offset ${newOffset}`
-        );
         setItemOffset(newOffset);
     };
 

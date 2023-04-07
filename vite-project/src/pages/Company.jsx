@@ -12,6 +12,7 @@ const Company = () => {
     const [companyInvoices, setCompanyInvoice] = useState([]);
 
     useEffect(() => {
+        try{
         axios.get(`https://cogip.jonathan-manes.be/get-company/${id}`)
         .then(res => setCompany(res.data.company));
         
@@ -20,6 +21,9 @@ const Company = () => {
 
         axios.get(`https://cogip.jonathan-manes.be//get-invoices/company/${id}`)
         .then(res => setCompanyInvoice(res.data.invoices));
+        } catch (e) {
+            console.log(e);
+        }
     }, [])
 
     return (
