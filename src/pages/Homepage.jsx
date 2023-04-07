@@ -29,7 +29,7 @@ const Homepage = () => {
         <>
         <Header/>
         <section className="hero__wrapper hero__wrapper--upper"><h1>Manage your customers and invoices easily</h1>
-        <img src="/images/hero_one.webp" alt=""/>
+        <img src="/public/images/hero_one.webp" alt=""/>
         </section>
         <main>
         <h2>Last invoices</h2>
@@ -48,7 +48,7 @@ const Homepage = () => {
         </tbody>
         </table>
         </div>
-        <img className="project" src="/images/project.png" loading="lazy" alt=""/>
+        <img className="project" src="/public/images/project.png" loading="lazy" alt=""/>
         <h2>Last contacts</h2>
         <div className="homepage__table-container"><table className="homepage__table"><thead><tr>
         <th>Name</th>
