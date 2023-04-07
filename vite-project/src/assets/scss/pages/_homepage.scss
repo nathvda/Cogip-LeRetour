@@ -4,14 +4,14 @@
 
     h1{
         font-size:calc($largest * 0.65);
-        font-family:$titlefont;
-        font-weight:bolder;
+        font-family:$mainfont;
         text-transform:uppercase;
         margin:0 calc($padding*2);
+        font-weight:900;
     }
 
     h2{
-        font-size:$huge;
+        font-size:$biggest;
         font-style:normal;
         font-family:Inter;
         font-weight:900;
@@ -43,6 +43,7 @@
         h2{ 
             font-family: Inter;
             font-weight: 900;
+            font-size:$huge;
             text-transform: uppercase;
             margin: 1rem 12rem 0 4rem;
         }
@@ -51,6 +52,14 @@
     .hero__wrapper--lower{
         background-size: 50%;
         background-position: bottom right;
+
+        h2{ 
+            font-family: Inter;
+            font-weight: 900;
+            font-size:$biggest;
+            text-transform: uppercase;
+            margin: 1rem 12rem 0 4rem;
+        }
     }
     
 
