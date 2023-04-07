@@ -6,7 +6,7 @@ import Navigation from './Navigation';
 const Header = () => {
     return (
         <header>
-            <Link to="/home"><img src="/images/logo_cogip.png" alt="cogip logo" /></Link>
+            <Link to="/home"><img src="/public/images/logo_cogip.png" alt="cogip logo" /></Link>
             <Navigation/>
             <LoginAndSignUp/>
         </header>

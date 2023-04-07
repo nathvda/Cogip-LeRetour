@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer>
             <div className="footer__partOne">
-            <img className="logo" src="/images/logo_cogip.png" alt="" />
+            <img className="logo" src="/public/images/logo_cogip.png" alt="" />
             <Informations/>
             </div>
             <FooterNavigation/>

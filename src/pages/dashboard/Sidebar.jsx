@@ -5,7 +5,7 @@ const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className="sidebar__top">
-                <img src="/images/jeanchris.png" alt="Your profile picture"/>
+                <img src="/public/images/jeanchris.png" alt="Your profile picture"/>
                 <h2 className="sidebar__title">Jean Christian Ranu</h2>
             </div> 
            <div className="sidebar__links">
@@ -23,7 +23,7 @@ const Sidebar = () => {
             </NavLink>
             </div>
             <div className="sidebar__bottom">
-                <img src="/images/jeanchris.png" alt="Your profile picture"/>
+                <img src="/public/images/jeanchris.png" alt="Your profile picture"/>
                 <form action="" method="post"><button type="submit">Logout</button></form> 
             </div> 
         </div>

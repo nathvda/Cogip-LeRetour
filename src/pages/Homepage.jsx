@@ -70,7 +70,7 @@ const Homepage = () => {
         </tbody>
         </table>
         </div>
-        <img className="lightbulb" src="/images/bulb.png" loading="lazy" alt=""/>
+        <img className="lightbulb" src="/public/images/bulb.png" loading="lazy" alt=""/>
         <h2>Last companies</h2> 
         <div className="homepage__table-container">
         <table className="homepage__table"><thead><tr>
@@ -95,7 +95,7 @@ const Homepage = () => {
         </div>
         </main>
         <section className="hero__wrapper hero__wrapper--lower"><h2>Work better in your company</h2>
-        <img src="/images/hero_two.webp" alt=""/>
+        <img src="/public/images/hero_two.webp" alt=""/>
         </section>
         <Footer/>
         </>
